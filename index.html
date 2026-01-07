@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body
+    class="flex bg-[var(--slate-100)] items-center justify-center min-h-screen"
+  >
+    <!-- CONTAINER -->
+    <div
+      class="flex flex-col items-center md:items-start md:flex-row w-[700px] md:rounded-2xl bg-white overflow-hidden"
+    >
+      <!-- LEFT SECTION -->
+      <div class="bg-white w-[400px] px-10 md:px-5 py-7">
+        <!-- HEADER -->
+        <div
+          class="flex flex-col items-start gap-1 md:flex-row md:items-center justify-between text-center mb-6"
+        >
+          <h2 class="text-md font-semibold tracking-wider">
+            Mortgage Calculator
+          </h2>
+          <button class="text-xs underline text-gray-500">Clear All</button>
+        </div>
+        <!-- MORTGAGE AMOUNT -->
+        <!-- focus:outline-none focus:ring-2 focus:ring-[var(--Lime)] focus:border-transparent -->
+        <div class="space-y-2 mb-4">
+          <h3 class="text-xs text-gray-500 tracking-wide">Mortgage Amount</h3>
+          <div
+            class="border border-gray-500 rounded-sm py-1 overflow-hidden space-x-2"
+          >
+            <span
+              class="bg-[var(--slate-100)] px-3 py-3 font-semibold items-center text-gray-500 font-semibold text-xs"
+              >£</span
+            >
+            <span class="text-sm font-semibold">300,000</span>
+          </div>
+        </div>
+        <!-- MORTGAGE & INTEREST -->
+        <div
+          class="flex flex-col gap-4 md:gap-0 md:flex-row md:justify-between mb-4"
+        >
+          <!-- MORTGAGE TERM -->
+          <div class="space-y-2">
+            <h3 class="text-xs text-gray-500 tracking-wide">Mortgage Team</h3>
+            <div
+              class="relative border border-gray-500 rounded-sm py-1 md:space-x-27 overflow-hidden"
+            >
+              <span class="text-sm px-2 font-semibold">25</span>
+              <span
+                class="absolute right-0 top-0 text-xs px-3 py-2 text-gray-500 font-semibold bg-[var(--slate-100)]"
+                >years</span
+              >
+            </div>
+          </div>
+          <!-- INTEREST RATE -->
+          <div class="space-y-2">
+            <h3 class="text-xs text-gray-500 tracking-wide">Interest Rate</h3>
+            <div
+              class="relative border border-gray-500 rounded-sm py-1 md:space-x-27 overflow-hidden"
+            >
+              <span class="text-sm px-2 font-semibold">5.25</span>
+              <span
+                class="absolute right-0 top-0 px-3 py-2 text-xs text-gray-500 font-semibold bg-[var(--slate-100)]"
+                >%</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- MORTGAGE TYPE -->
+        <div class="space-y-2 mb-7">
+          <h3 class="text-xs text-gray-500 tracking-wide">Mortgage Type</h3>
+          <!-- REPAYMENT -->
+          <div
+            class="border border-[var(--Lime)] flex items-center bg-[var(--Lime)]/15 px-2 rounded-sm py-2 gap-2"
+          >
+            <div
+              class="w-3.5 h-3.5 rounded-full border border-[var(--Lime)] relative"
+            >
+              <span
+                class="w-2 h-2 bg-[var(--Lime)] absolute left-0.5 top-0.5 rounded-full"
+              ></span>
+            </div>
+            <p class="text-xs font-semibold">Repayment</p>
+          </div>
+          <!-- INTEREST ONLY -->
+          <div
+            class="border border-gray-500 flex items-center px-2 rounded-sm py-2 gap-2"
+          >
+            <div class="w-3.5 h-3.5 rounded-full border"></div>
+            <p class="text-xs font-semibold">Interest Only</p>
+          </div>
+        </div>
+        <!-- BUTTON -->
+        <div
+          class="flex py-3 gap-2 md:w-[200px] items-center justify-center rounded-full bg-[var(--Lime)]"
+        >
+          <img src="/assets/images/icon-calculator.svg" alt="" class="w-4" />
+          <span class="text-xs font-semibold tracking-wide"
+            >Calculate Repayments</span
+          >
+        </div>
+      </div>
+      <!-- RIGHT SECTION -->
+      <div
+        class="w-[400px] md:self-stretch bg-[var(--slate-900)]/93 px-10 md:px-5 py-7 rounded-bl-[50px]"
+      >
+        <!-- YOUR RESULTS TEXTS -->
+        <div class="space-y-2 text-white mb-8">
+          <h2 class="text-md font-semibold tracking-wider">Your results</h2>
+          <p class="text-xs opacity-70">
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+        </div>
+        <div class="rounded-sm overflow-hidden">
+          <div class="h-1 bg-[var(--Lime)]"></div>
+          <!-- PAYMENTS -->
+          <div class="bg-[var(--slate-900)] px-5 py-4">
+            <h3 class="text-xs text-white opacity-70">Your monthly payments</h3>
+            <h1 class="text-[40px] text-[var(--Lime)] font-semibold mb-4">
+              £1,797.74
+            </h1>
+            <!-- STROKE LINE -->
+            <div class="w-full bg-white opacity-10 h-px mb-5"></div>
+            <!-- REPAY FEE -->
+            <div class="space-y-1">
+              <h3 class="text-xs text-white opacity-70">
+                Total you'll repay over the team
+              </h3>
+              <h2 class="text-md text-white">£539,322.94</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
